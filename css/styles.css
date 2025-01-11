@@ -40,6 +40,7 @@ header nav a:hover {
     color: #00bcd4;
 }
 
+/* Hero section: Ajustes en el contenedor y el fondo */
 .hero {
     display: flex;
     justify-content: space-between;
@@ -47,12 +48,19 @@ header nav a:hover {
     height: 100vh;
     padding: 2rem;
     margin-top: 5rem;
-    background-color: #eaeaea;
     position: relative;
+    overflow: hidden;
+    /* Evitar desbordamientos */
+    opacity: 1;
+    /* Añadido para desvanecer la sección */
+    transition: opacity 1s ease-out;
+    /* Transición suave para el cambio de imagen */
 }
 
 .hero .content {
     max-width: 50%;
+    z-index: 1;
+    /* Asegura que el texto esté sobre las imágenes */
 }
 
 .hero h1 {
@@ -79,45 +87,46 @@ header nav a:hover {
     background-color: #333;
 }
 
+/* Media section: Fondo de imagen con blur */
 .hero .media {
-    max-width: 40%;
-}
-
-.hero .media img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Fondo de imagen con blur */
-header::before {
-    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('img/past.jpg');
-    /* Cambia la ruta aquí */
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /* Asegura que el fondo esté detrás del contenido */
     background-size: cover;
     background-position: center;
     filter: blur(10px);
-    z-index: -1;
-    transition: opacity 0.5s;
+    height: 100%;
+    transition: opacity 1s ease-out;
+    /* Transición suave para el cambio de imagen */
 }
 
-/* Contenedor de las imágenes que se desplazan */
+/* Fondo de la segunda sección con blur */
+.hero+.hero .media {
+    background-image: url('img/pest.jpg');
+    /* Cambia la ruta aquí */
+}
+
+/* Ajuste de la visibilidad de las imágenes */
 .image-container {
     position: relative;
+    width: 100%;
+    height: 500px;
+    /* Ajusta la altura según el diseño */
     overflow: hidden;
-    height: 300px;
-    /* Ajusta la altura según tus necesidades */
 }
 
 .image {
     position: absolute;
     width: 100%;
-    transition: transform 1s, opacity 1s;
+    height: 100%;
+    object-fit: cover;
+    /* Asegura que la imagen cubra todo el espacio */
+    transition: opacity 1s ease-out;
+    /* Transición suave para la opacidad */
 }
 
 .top {
@@ -126,5 +135,4 @@ header::before {
 
 .bottom {
     opacity: 0;
-    transform: translateY(100%);
 }
