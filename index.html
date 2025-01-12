@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huaira Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header>
-        <div class="logo">Huaira</div>
+        <img src="img/hua.jpg" alt="Logo">
         <nav>
             <a href="#">Inicio</a>
             <a href="#">Nuestra Historia, Nuestro Equipo</a>
@@ -30,23 +31,75 @@
         </div>
         <div class="media"></div>
         <div class="image-container">
-            <img class="image top" src="img/pest.jpg" alt="Image 1">
-            <img class="image top" src="img/post.jpg" alt="Image 2">
-            <img class="image top" src="img/past.jpg" alt="Image 3">
+            <img class="image top" src="img/seguri1.jpg" alt="Image 1">
+            <img class="image top" src="img/seguri2.jpg" alt="Image 2">
+            <img class="image top" src="img/seguri3.jpg" alt="Image 3">
         </div>
     </section>
 
-    <section class="hero">
-        <div class="content">
-            <h1>Fine Art</h1>
-            <p>Stunning Wall Decor For Any Space</p>
-            <button>View It Now</button>
+    <!-- Nuevos cuadros de información -->
+    <section class="info-cards">
+        <div class="card">
+            <img src="img/box1.jpg" alt="img1">
+            <h2>Card Title 1</h2>
+            <p>Description</p>
+            <a href="#">Learn More</a>
         </div>
-        <div class="media"></div>
-        <div class="image-container">
-            <img class="image top" src="img/post.jpg" alt="Image 2">
+        <div class="card">
+            <img src="img/box2.jpg" alt="img2">
+            <h2>Card Title 2</h2>
+            <p>Description</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="card">
+            <img src="img/box3.jpg" alt="img3">
+            <h2>Card Title 3</h2>
+            <p>Description</p>
+            <a href="#">Learn More</a>
         </div>
     </section>
+
+    <footer class="footer">
+        <!-- Logo -->
+        <img src="img/hua.jpg" alt="Logo Huaira">
+
+        <!-- Suscripción a la Newsletter -->
+        <div class="newsletter-card">
+            <h3>Suscríbete a nuestra Newsletter</h3>
+            <form action="#" method="POST">
+                <input type="email" placeholder="Ingresa tu correo" required />
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <!-- Ubicación -->
+        <div class="footer-location">
+            <h3>Ubicación</h3>
+            <p>Dirección: Calle Principal 123, Ciudad, País</p>
+            <p>Teléfono: +123 456 789</p>
+            <p>Email: contacto@huaira.com</p>
+        </div>
+
+        <div class="footer-social">
+            <h3>Síguenos</h3>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+
+        <p>&copy; 2023 Huaira. Todos los derechos reservados.</p>
+    </footer>
 
 
     <script src="js/script.js"></script>
